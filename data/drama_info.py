@@ -16,7 +16,9 @@ class DramaInfo:
         tokens = re.split("第[0-9]+集", text.strip())
         if len(tokens) > 1:
             self.name = tokens[0].strip()
-            self.num = int(re.sub(r".*[Ee][Pp]", "", tokens[1]))
+            tokens[1] = re.sub(r".*[Ee][Pp]", "", tokens[1])
+            if len(tokens[1]) > 0:
+                self.num = int(tokens[1])
 
 def print_pretty_drama_infos(infos):
     for i in infos:
@@ -42,10 +44,10 @@ def read_from_file(path):
 
     db = TinyDB(path)
     for i in db.all():
-        drama_info = DramaInfo
-        drama_info.name = i.name
-        drama_info.num = int(i.num)
-        drama_info.url = i.url
+        drama_info = DramaInfo()
+        drama_info.name = i["name"]
+        drama_info.num = int(i["num"])
+        drama_info.url = i["url"]
         infos.append(drama_info)
     db.close()
 

@@ -9,4 +9,4 @@ if __name__ == "__main__":
     dramas = crawler.get_dramas()
 
     data.drama_info.print_pretty_drama_infos(dramas)
-    data.drama_info.write_to_file("Dramas.json")
+    data.drama_info.write_to_file("Dramas.json", dramas)
