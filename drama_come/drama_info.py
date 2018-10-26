@@ -21,6 +21,17 @@ class DramaInfo:
             if len(tokens[1]) > 0:
                 self.num = int(tokens[1])
 
+    @staticmethod
+    def get_info_str(dramas):
+        """Return constructed string of drama info.
+        :return: Text to show drama info.
+        """
+        pretty_str = ""
+        for i in dramas:
+            pretty_str += str("%s   EP %d\n" % (i.name, i.num))
+            pretty_str += str("%s\n" % (i.url))
+        return pretty_str
+
 
 class DramaInfoHandler:
     """Store drama infos and provide functions to output as file or html."""
@@ -46,7 +57,7 @@ class DramaInfoHandler:
 
     def get_drama_info_string(self):
         """Return constructed string of drama info.
-        :return: Text to show drame info.
+        :return: Text to show drama info.
         """
         pretty_str = ""
         for v in self.__dramas.values():
