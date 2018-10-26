@@ -44,10 +44,16 @@ class DramaInfoHandler:
             single_drama_list.append(drama)
         self.__dramas[drama.name] = single_drama_list
 
-    def print_pretty_drama_infos(self):
+    def get_drama_info_string(self):
+        """Return constructed string of drama info.
+        :return: Text to show drame info.
+        """
+        pretty_str = ""
         for v in self.__dramas.values():
             for i in v:
-                print("%s   EP %d   %s" % (i.name, i.num, i.url))
+                pretty_str += str("%s   EP %d\n" % (i.name, i.num))
+                pretty_str += str("%s\n" % (i.url))
+        return pretty_str
 
     def write_to_file_html(self, path):
         file = None

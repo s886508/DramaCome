@@ -10,6 +10,6 @@ if __name__ == "__main__":
     for new_drama in crawler.get_dramas():
         handler.add_drama(new_drama)
 
-    handler.print_pretty_drama_infos()
+    print(handler.get_drama_info_string())
     handler.write_to_file("Dramas.json")
     handler.write_to_file_html("drama.html")
