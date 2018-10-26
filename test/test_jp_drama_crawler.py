@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from drama_come.drama_crawler import JPDramaCrawler
+from ..drama_come.drama_crawler import JPDramaCrawler
 
 class TestCrawler(object):
 

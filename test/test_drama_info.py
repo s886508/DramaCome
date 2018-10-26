@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from drama_come.drama_info import DramaInfoHandler, DramaInfo
+from ..drama_come.drama_info import DramaInfoHandler, DramaInfo
 import os
 
 class TestDramaInfo(object):
