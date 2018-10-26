@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
-from drama_come.drama_info import DramaInfo
+from .drama_info import DramaInfo
 import requests
 
 JP_LOVE_URL = "http://jp03.jplovetv.com"
