@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-import pytest
-from data.drama_info import *
-import data.drama_info
+from drama_come.drama_info import DramaInfoHandler, DramaInfo
 import os
 
 class TestDramaInfo(object):

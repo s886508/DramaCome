@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
-from data.drama_info import DramaInfo
+from drama_come.drama_info import DramaInfo
 import requests
 
 JP_LOVE_URL = "http://jp03.jplovetv.com"
@@ -55,8 +55,3 @@ class JPDramaCrawler:
                 drama_info.append(info)
 
         return drama_info
-
-if __name__ == "__main__":
-    crawler = JPDramaCrawler()
-    crawler.retrieve_url()
-    crawler.get_dramas()

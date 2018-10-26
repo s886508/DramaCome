@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-from crawler.jp_drama_crawler import JPDramaCrawler
-from data.drama_info import *
-import data.drama_info
+from drama_come.drama_crawler import JPDramaCrawler
+from drama_come.drama_info import *
 
 if __name__ == "__main__":
     handler = DramaInfoHandler()

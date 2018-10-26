@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-import pytest
-from crawler.jp_drama_crawler import JPDramaCrawler
+from drama_come.drama_crawler import JPDramaCrawler
 
 class TestCrawler(object):
 
